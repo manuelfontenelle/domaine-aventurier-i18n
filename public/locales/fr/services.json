@@ -1,0 +1,35 @@
+{
+	"services": {
+		"titre": "Nos services",
+		"peche": {
+			"titre": "Pêche",
+			"content": "Situé sur une terre magnifique bordant la rivière du Lièvre, le réservoir aux sables, ainsi que l’immense réservoir du Poisson Blanc d’une distance de 29 km et parsemée de 148 îles, notre havre de paix est également entouré de 250 lacs.",
+			"content2": "La pêche y est en abondance et de choix (doré, brochet, truite grise, achigan, ouananiche, perchaude, etc.)."
+		},
+		"chasse": {
+			"titre": "Chasse",
+			"content": "La très forte densité de Cerfs de Virginie dans la zone 10 Ouest profite considérablement aux adeptes de la chasse.",
+			"content2": "Les chasseurs pourront bénéficier d’un territoire exclusif et non exclusif (Terres de la Couronne) à proximité de nos services.",
+			"content3": "Que ce soit pour la chasse à l’arc, la carabine, la poudre noire ou bien à l’arbalète nous pouvons vous offrir le service de mirador et d’appâts.",
+			"content4": "Contactez-nous pour connaître les modalités & les conditions."
+		},
+		"chalet": {
+			"titre": "Chalet",
+			"content": "Nos chalets rustiques vous charmeront avec leurs vue superbe sur la Rivière du Lièvre et leur prix de location peu dispendieux. Ils sont tous meublés et la vaisselle est incluse.",
+			"content2": "Vous devez apporter:",
+			"content3": "- Literie",
+			"content4": "- Serviettes de bain"
+		},
+		"camping": {
+			"titre": "Camping & Caravanning",
+			"sousTitre": "(Saisonnier et Journalier)",
+			"content": "Profitez de notre site pourvu d’arbres matures, pour vous offrir la tranquillité ainsi que les joies du plein air.",
+			"content2": "La majorité de nos terrains comprennent l’eau, l’électricité et les égouts. Nous possédons également sur notre site un bloc sanitaire avec douches, toilettes (papier non inclus) et buanderie."
+		},
+		"quad": {
+			"titre": "Quad",
+			"content": "Les aventuriers de quad pourront bénéficier de 200 km de sentiers 4 saisons entretenus remarquablement par le club local de la municipalité membre de la Fédération Québécoise des Clubs Quads. ",
+			"content2": "La majorité de nos terrains comprennent l’eau, l’électricité et les égouts. Nous possédons également sur notre site un bloc sanitaire avec douches, toilettes (papier non inclus) et buanderie."
+		}
+	}
+}

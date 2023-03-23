@@ -1,0 +1,42 @@
+{
+	"home": {
+		"titre": "Domaine Aventurier - Pourvoirie chasse et pêche dans les Hautes Laurentides",
+		"sousTitre": "Pourvoirie chasse et pêche dans les Hautes Laurentides",
+		"quiSommesNous": {
+			"titre": "Qui sommes-nous ?",
+			"content": "Site renommé pour la chasse et la pêche, le Domaine Aventurier est un endroit paisible pour les vacances en famille ou entre amis.",
+			"content2": "Chalets, terrains de camping, vacances plein air, plage, sentiers FQCQ (VTT) pour initier ou satisfaire les adeptes de plein air de tous âges.",
+			"content3": "Location d'embarcation multiple, kayak, paddleboard, chaloupe avec ou sans moteur et ponton.",
+			"content4": "Situé dans la région touristique des Hautes Laurentides au Québec, tout près de l’Outaouais.",
+			"content5": "Vous trouverez : épicerie, dépanneurs, quincaillerie, pharmacie, restaurants, services bancaires, rampe de mise à l'eau, poste d’essence et de réparations à moins de 5 minutes du Domaine Aventurier."
+		},
+		"pdf": {
+			"titre": "Voyez notre reportage dans le Magazine Sentier Chasse & Pêche :"
+		},
+		"forfaits": {
+			"titre": "Nos forfaits :",
+			"content": "Dindon",
+			"content2": "Chevreuil",
+			"content3": "Sauvagine",
+			"content4": "Ours",
+			"content5": "Pêche",
+			"content6": "Motoneige / Quad",
+			"link": "En savoir +"
+		},
+		"blockContent1": {
+			"titre": "Réservez votre séjour et profitez d’une expérience inoubliable !",
+			"content": "Contactez-nous dès maintenant pour réserver votre séjour au sein de notre pourvoirie 4 saisons, ou pour toutes demandes d’informations concernant l’emplacement, la disponibilité, les équipements sur place, les tarifs ou toutes autres questions. Il nous fera plaisir de vous apporter des réponses claires et précises sur ce que vous trouverez sur place.",
+			"content2": "Au plaisir de vous accueillir au Domaine Aventurier"
+		},
+		"contact": {
+			"content": "(Cellulaire : Appel / SMS)"
+		},
+		"directions": {
+			"titre": "Directions :",
+			"content": "De Montréal:",
+			"content2": "Autoroute 15 Nord – sortie 35, autoroute 50 Ouest – sortie 174, route 309 Nord jusqu’au village de Notre-Dame-du-Laus, prendre le pont à gauche (réservoir Poisson Blanc), au bout du pont tourner à droite sur le chemin du Poisson Blanc jusqu’au Domaine Aventurier. (2km)",
+			"content3": "D’Ottawa:",
+			"content4": "Autoroute 50 Est, route 309 Nord jusqu’au village de Notre-Dame-du-Laus, prendre le pont à gauche (réservoir Poisson Blanc), au bout du pont tourner à droite sur le chemin du Poisson Blanc jusqu’au Domaine Aventurier. (2km)"
+		}
+	}
+}

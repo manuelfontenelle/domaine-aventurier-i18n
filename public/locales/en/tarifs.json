@@ -1,0 +1,105 @@
+{
+	"tarifs": {
+		"titre": "Domaine Aventurier - Prices",
+		"titre2": "Our Prices",
+		"forfaitChasse": {
+			"titre": "Hunting packages 2023-2024"
+		},
+		"forfaitPeche": {
+			"titre": "Fishing packages 2023-2024"
+		},
+		"forfaitQuad": {
+			"titre": "Quad-Snowmobile Packages 2023-2024"
+		},
+		"dindon": {
+			"titre": "WILD TURKEY",
+			"content": "PACKAGE 3 NIGHTS, 2 MORNINGS + GUIDE",
+			"content2": "900.00$ +tx / Person",
+			"content3": "Additional person 450$ +tx",
+			"content4": "Decoys, shelter"
+		},
+		"cerf": {
+			"titre": "WHITE-TAILED DEER",
+			"content": "3 NIGHTS + 4 DAYS HUNTING PACKAGE",
+			"content2": "550$ +tx / Person",
+			"content3": "Accommodation included"
+		},
+		"sauvagine": {
+			"titre": "WATERFOWL PACKAGE",
+			"content": "PACKAGE 2 NIGHTS + 2 MORNINGS WITH GUIDE",
+			"content2": "600.00 +tx / Person",
+			"content3": "Additional person 300$ +tx",
+			"content4": "Decoys, shelter"
+		},
+		"ours": {
+			"titre": "BEAR PACKAGE",
+			"content": "3 NIGHTS + 2 DAYS HUNTING PACKAGE",
+			"content2": "750.00 +tx / Person",
+			"content3": "Additional person 500$ +tx",
+			"content4": "Baited sites, shelter"
+		},
+
+		"peche": {
+			"titre": "FISHING PACKAGE",
+			"content": "2 NIGHTS + 3 DAYS FISHING PACKAGE",
+			"content2": "550.00$ +tx / Person",
+			"content3": "1 WEEK PACKAGE",
+			"content4": "1100.00 +tx / Person",
+			"content5": "Accommodation included + Boat"
+		},
+
+		"quad": {
+			"titre": "QUAD-SNOWMOBILE",
+			"content": "PACKAGE 2 NIGHTS + 3 DAYS OF QUAD",
+			"content2": "550.00$ +tx / Person",
+			"content3": "1 WEEK PACKAGE",
+			"content4": "1100$ +tx / Person",
+			"content5": "Includes bedding and pre-cooked meals"
+		},
+		"vagabond": {
+			"titre": "VAGABOND PACKAGE :",
+			"content": "Includes: 1 night lodging, bedding, pre-cooked meal service a la carte.",
+			"content2": "100$ +tx / Person / Night - Week only"
+		},
+		"touriste": {
+			"titre": "TOURIST PACKAGE :",
+			"content": "Includes: Minimum 3 nights lodging, bedding, pre-cooked meal service à la carte.",
+			"content2": "Weekdays = 110$ +tx / Person / Night",
+			"content3": "Weekend = 150$ +tx / Person / Night"
+		},
+		"debarcadere": {
+			"titre": "LANDING PACKAGE FOR 2 PERSONS :",
+			"content": "Includes: Lodging (2 nights), 1 night upon arrival and 1 night upon departure, bedding, trailer parking, pre-cooked meal service a la carte.",
+			"content2": "Weekdays = 120$ +tx / Person / Night",
+			"content3": "Weekend = 160$ +tx / Person / Night"
+		},
+		"aventurier": {
+			"titre": "ADVENTURER PACKAGE FOR 2 PEOPLE:",
+			"content": "Includes: Lodging 3 nights, 2 days of ice fishing all equipped, pre-cooked meals à la carte.",
+			"content2": "Weekdays = 275$ +tx / Person / Night",
+			"content3": "Weekend = 300$ +tx / Person / Night"
+		},
+		"chalet": {
+			"titre": "CABINS",
+			"titre2": "Cabin",
+			"sousTitre": "(MINIMUM 2 NIGHTS)",
+			"content": "NUMBER OF ROOMS",
+			"content2": "PERSONS",
+			"content3": "PER DAY",
+			"content4": "PER WEEK",
+			"content5": "PETS ARE NOT ACCEPTED ON THE SITE.",
+			"content6": "(not available / office)"
+		},
+		"camping": {
+			"titre": "CAMPING",
+			"content": "TENT",
+			"content2": "TENT-TRAILER",
+			"content3": "TRAILER",
+			"content4": "PER DAY",
+			"content5": "PER WEEK",
+			"content6": "MONTH",
+			"content7": "SEASON",
+			"content8": "(MAY 15 TO OCT 15)"
+		}
+	}
+}

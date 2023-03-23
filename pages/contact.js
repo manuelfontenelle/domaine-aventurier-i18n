@@ -12,7 +12,21 @@ import icon2 from "../public/icones/phone_black.png"
 import logo from "../public/logo.png"
 import { useEffect, useState } from "react"
 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useTranslation } from "next-i18next"
+
+export async function getStaticProps({ locale }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ["home", "nav", "form"])),
+			// Will be passed to the page component as props
+		},
+	}
+}
+
 const contact = () => {
+	const { t } = useTranslation("home")
+
 	const [scroll, setScroll] = useState(false)
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
@@ -47,9 +61,6 @@ const contact = () => {
 				<section className="container mb-10">
 					<div className="flex flex-col md:flex-row ">
 						<div className="block  my-10">
-							<h3 className="mb-6 font-bold text-xl uppercase">
-								Formulaire de contact :
-							</h3>
 							<Formulaire />
 						</div>
 						<div className=" py-10 bg-white md:ml-16">
@@ -79,7 +90,7 @@ const contact = () => {
 										<span className="mt-1 block">
 											514-518-2643
 											<span className="text-sm md:ml-1 block md:inline-block">
-												(Cellulaire : Appel / SMS)
+												{t("home.contact.content")}
 											</span>
 										</span>
 									</p>

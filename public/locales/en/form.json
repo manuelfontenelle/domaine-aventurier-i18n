@@ -1,0 +1,11 @@
+{
+	"form": {
+		"titre": "CONTACT FORM:",
+		"prenom": "First name",
+		"nom": "Last name",
+		"téléphone": "Phone",
+		"email": "Email",
+		"message": "Your message...",
+		"envoyer": "Send"
+	}
+}

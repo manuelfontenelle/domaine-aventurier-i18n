@@ -1,0 +1,106 @@
+{
+	"tarifs": {
+		"titre": "Domaine Aventurier - Tarifs",
+		"titre2": "Nos tarifs",
+		"forfaitChasse": {
+			"titre": "Forfaits chasse 2023-2024"
+		},
+		"forfaitPeche": {
+			"titre": "Forfaits pêche 2023-2024"
+		},
+		"forfaitQuad": {
+			"titre": "Forfaits Quad-Motoneige 2023-2024"
+		},
+		"dindon": {
+			"titre": "Dindon Sauvage",
+			"content": "Forfait 3 nuitées, 2 matinées + guide",
+			"content2": "900.00$ +tx / Personne",
+			"content3": "Personne additionnelle 450$ +tx",
+			"content4": "Leurres, tente"
+		},
+		"cerf": {
+			"titre": "CERF DE VIRGINIE (chevreuil)",
+			"content": "Forfait 3 nuitées + 4 jours de chasse",
+			"content2": "550$ +tx / Personne",
+			"content3": "Hébergement inclus"
+		},
+		"sauvagine": {
+			"titre": "Forfait Sauvagine",
+			"content": "Forfait 2 nuitées + 2 matinées avec guide",
+			"content2": "600.00$ +tx / Personne",
+			"content3": "Personne additionnelle 300$ +tx",
+			"content4": "Leurres, tente"
+		},
+		"ours": {
+			"titre": "Forfait Ours",
+			"content": "Forfait 3 nuitées + 2 jours de chasse",
+			"content2": "750.00$ +tx / Personne",
+			"content3": "Personne additionnelle 500$ +tx",
+			"content4": "Sites appâtés, cache, tente"
+		},
+
+		"peche": {
+			"titre": "Forfait Pêche",
+			"content": "Forfait 2 nuitées + 3 jours de pêche",
+			"content2": "550.00$ +tx / Personne",
+			"content3": "Forfait 1 semaine",
+			"content4": "1100.00$ +tx / Personne",
+			"content5": "Hébergement inclus + Embarcation"
+		},
+
+		"quad": {
+			"titre": "Quad-Motoneige",
+			"content": "Forfait 2 nuitées + 3 jours de quad",
+			"content2": "550.00$ +tx / Personne",
+			"content3": "Forfait 1 semaine",
+			"content4": "1100$ +tx / Personne",
+			"content5": "Inclus la literie et repas pré-cuisinés"
+		},
+		"vagabond": {
+			"titre": "forfait Vagabond :",
+			"content": "Comprend: Hébergement 1 nuit, literie, service de repas pré-cuisinés à la carte.",
+			"content2": "100$ +tx / Personne / Nuit - Semaine seulement"
+		},
+		"touriste": {
+			"titre": "Forfait touriste :",
+			"content": "Comprend: Hébergement minimum 3 nuits, literie, service de repas pré-cuisinés à la carte.",
+			"content2": "En semaine = 110$ +tx / Personne / Nuit",
+			"content3": "Week-end = 150$ +tx / Personne / Nuit"
+		},
+		"debarcadere": {
+			"titre": "Forfait débarcadère pour 2 personnes :",
+			"content": "Comprend: Hébergement (2 nuits), 1 nuit à votre arrivée et 1 nuit à votre départ, literie, stationnement pour remorque, service de repas pré-cuisinés à la carte.",
+			"content2": "En semaine = 120$ +tx / Personne / Nuit",
+			"content3": "Week-end = 160$ +tx / Personne / Nuit"
+		},
+		"aventurier": {
+			"titre": "Forfait Aventurier pour 2 personnes :",
+			"content": "Comprend: Hébergement 3 nuits, 2 jours de pêche blanche tout équipé, repas pré-cuisinés à la carte.",
+			"content2": "En semaine = 275$ +tx / Personne / Nuit",
+			"content3": "Week-end = 300$ +tx / Personne / Nuit"
+		},
+		"chalet": {
+			"titre": "Chalets",
+			"titre2": "Chalet",
+			"sousTitre": "(MINIMUM 2 NUITS)",
+			"content": "NOMBRE DE CHAMBRES",
+			"content2": "PERSONNES",
+			"content3": "PAR JOUR",
+			"content4": "PAR SEMAINE",
+			"content5": "LES ANIMAUX DE COMPAGNIES NE SONT PAS ACCEPTÉS SUR LE SITE.",
+			"content6": "(non disponible / bureau)"
+		},
+		"camping": {
+			"titre": "CAMPING",
+			"content": "TENTE",
+			"content2": "TENTE-ROULOTTE",
+			"content3": "ROULOTTE",
+
+			"content4": "PAR JOUR",
+			"content5": "PAR SEMAINE",
+			"content6": "MOIS",
+			"content7": "SAISON",
+			"content8": "(15 MAI AU 15 OCT)"
+		}
+	}
+}

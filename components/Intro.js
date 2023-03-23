@@ -6,7 +6,10 @@ import partenaire2 from "../public/logos/logo_fedecp.png"
 import partenaire3 from "../public/logos/logo_pourvoiries.png"
 import partenaire4 from "../public/logos/logo_laurentides.png"
 import partenaire5 from "../public/logos/logo_fcmq.png"
+import { useTranslation } from "next-i18next"
+
 const Intro = () => {
+	const { t } = useTranslation("home")
 	return (
 		<section className="relative min-h-screen w-full h-full  bg-cover bg-no-repeat bg-center md:bg-[center] ">
 			<div className="flex justify-center  flex-col h-full gap-3 min-h-screen px-5 lg:items-center">
@@ -14,7 +17,7 @@ const Intro = () => {
 					Domaine Aventurier
 				</h1>
 				<span className="font-OpenSans font-semibold text-white text-2xl lg:text-2xl">
-					Pourvoirie chasse et pêche dans les Hautes Laurentides
+					{t("home.sousTitre")}
 				</span>
 				<span className="mt-2 h-1.5 w-20 bg-white"></span>
 			</div>

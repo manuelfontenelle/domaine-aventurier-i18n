@@ -62,7 +62,7 @@ const NavBar = ({ scroll }) => {
 							className={currentRoute === "/services" ? "active" : "nonActive"}
 						>
 							<li className="ml-10 text-sm uppercase borderBottomCustom">
-								Services
+								{t("nav.services")}
 							</li>
 						</Link>
 						<Link
@@ -70,7 +70,7 @@ const NavBar = ({ scroll }) => {
 							className={currentRoute === "/tarifs" ? "active" : "nonActive"}
 						>
 							<li className="ml-10 text-sm uppercase borderBottomCustom">
-								Tarifs
+								{t("nav.tarifs")}
 							</li>
 						</Link>
 						<Link
@@ -78,7 +78,7 @@ const NavBar = ({ scroll }) => {
 							className={currentRoute === "/contact" ? "active" : "nonActive"}
 						>
 							<li className="ml-10 text-sm uppercase borderBottomCustom">
-								Contact
+								{t("nav.contact")}
 							</li>
 						</Link>
 						<a

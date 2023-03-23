@@ -1,0 +1,42 @@
+{
+	"home": {
+		"titre": "Domaine Aventurier - Upper Laurentians Hunting and fishing outfitter",
+		"sousTitre": "Upper Laurentians Hunting and fishing outfitter",
+		"quiSommesNous": {
+			"titre": "About us",
+			"content": "Renowned for its hunting and fishing sites, Domaine Aventurier is a peaceful place to spend vacations with family or friends.",
+			"content2": "Cottages, campgrounds, outdoor activities, beach, FQCQ trails (ATV) to satisfy the outdoor enthusiasts of all ages",
+			"content3": "Various boat rentals, kayak, paddleboard, boat with or without motor and pontoon.",
+			"content4": "Located in the touristic region of the Upper Laurentians in Quebec, close to the Outaouais region.",
+			"content5": "You will find: grocery, convenience and hardware store, pharmacy, restaurants, banking services, boat launch, gas stations and repairs within 5 minutes from Domaine Aventurier."
+		},
+		"pdf": {
+			"titre": "See our article in the Sentier Chasse & Pêche Magazine:"
+		},
+		"forfaits": {
+			"titre": "Our packages :",
+			"content": "Turkey",
+			"content2": "Deer",
+			"content3": "Waterfowl",
+			"content4": "Bear",
+			"content5": "Fishing",
+			"content6": "Snowmobile – ATV",
+			"link": "Find out more"
+		},
+		"blockContent1": {
+			"titre": "BOOK YOUR STAY AND ENJOY AN UNFORGETTABLE EXPERIENCE!",
+			"content": "Contact us now in order to book your trip at our year-round lodge. For any information concerning the location, availability, equipment, rates or any other questions. It will be our pleasure to give you clear and precise answers on what you will find on site.",
+			"content2": "We look forward to meeting you at Domaine Aventurier"
+		},
+		"contact": {
+			"content": "(Cellular: Call / SMS)"
+		},
+		"directions": {
+			"titre": "Directions :",
+			"content": "From Montreal:",
+			"content2": "Highway 15 North - Exit 35, Highway 50 West - Exit 174, Route 309 North to the village of Notre-Dame-du-Laus, take the bridge on the left (Poisson Blanc Reservoir), at the end of the bridge turn right on Chemin du Poisson Blanc to Domaine Aventurier. (2 km)",
+			"content3": "From Ottawa:",
+			"content4": "Highway 50 East, route 309 North to the village of Notre-Dame-du-Laus, take the bridge on the left (Poisson Blanc Reservoir), at the end of the bridge turn right on chemin du Poisson Blanc to Domaine Aventurier. (2 km)"
+		}
+	}
+}

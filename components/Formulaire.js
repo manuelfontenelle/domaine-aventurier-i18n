@@ -2,8 +2,11 @@ import React from "react"
 import { useState } from "react"
 import axios from "axios"
 import { ThreeDots } from "react-loader-spinner"
+import { useTranslation } from "next-i18next"
 
 const Formulaire = () => {
+	const { t } = useTranslation("form")
+
 	const [prenom, setPrenom] = useState("")
 	const [nom, setNom] = useState("")
 	const [phone, setPhone] = useState("")
@@ -74,14 +77,16 @@ const Formulaire = () => {
 	}
 
 	return (
-		<div className="relative">
-			<div className="block rounded-lg  md:max-w-lg">
-				<form id="contact-form1" onSubmit={(e) => handleSubmit(e)}>
-					<div className="grid grid-cols-2 gap-4">
-						<div className="form-group mb-6">
-							<input
-								type="text"
-								className="form-control
+		<div>
+			<h3 className="mb-6 font-bold text-xl uppercase">{t("form.titre")}</h3>
+			<div className="relative">
+				<div className="block rounded-lg  md:max-w-lg">
+					<form id="contact-form1" onSubmit={(e) => handleSubmit(e)}>
+						<div className="grid grid-cols-2 gap-4">
+							<div className="form-group mb-6">
+								<input
+									type="text"
+									className="form-control
           block
           w-full
           px-3
@@ -96,16 +101,16 @@ const Formulaire = () => {
           ease-in-out
           m-0
           focus:text-black focus:bg-gray-50 focus:border-gray-600 focus:shadow-none focus:outline-none"
-								id="exampleInput123"
-								aria-describedby="emailHelp123"
-								placeholder="Prénom"
-								onChange={(e) => setPrenom(e.target.value)}
-							/>
-						</div>
-						<div className="form-group mb-6">
-							<input
-								type="text"
-								className="form-control
+									id="exampleInput123"
+									aria-describedby="emailHelp123"
+									placeholder={t("form.prenom")}
+									onChange={(e) => setPrenom(e.target.value)}
+								/>
+							</div>
+							<div className="form-group mb-6">
+								<input
+									type="text"
+									className="form-control
           block
           w-full
           px-3
@@ -120,18 +125,18 @@ const Formulaire = () => {
           ease-in-out
           m-0
           focus:text-black focus:bg-gray-50 focus:border-gray-600 focus:shadow-none focus:outline-none"
-								id="exampleInput124"
-								aria-describedby="emailHelp124"
-								placeholder="Nom"
-								onChange={(e) => setNom(e.target.value)}
-							/>
+									id="exampleInput124"
+									aria-describedby="emailHelp124"
+									placeholder={t("form.nom")}
+									onChange={(e) => setNom(e.target.value)}
+								/>
+							</div>
 						</div>
-					</div>
 
-					<div className="form-group mb-6">
-						<input
-							type="tel"
-							className="
+						<div className="form-group mb-6">
+							<input
+								type="tel"
+								className="
         form-control
         block
         w-full
@@ -148,16 +153,16 @@ const Formulaire = () => {
         m-0
         focus:text-black focus:bg-gray-50 focus:border-gray-600 focus:shadow-none focus:outline-none
       "
-							id="exampleTel0"
-							placeholder="Téléphone"
-							onChange={(e) => setPhone(e.target.value)}
-						/>
-					</div>
+								id="exampleTel0"
+								placeholder={t("form.téléphone")}
+								onChange={(e) => setPhone(e.target.value)}
+							/>
+						</div>
 
-					<div className="form-group mb-6">
-						<input
-							type="email"
-							className="form-control block
+						<div className="form-group mb-6">
+							<input
+								type="email"
+								className="form-control block
        w-full
        px-3
        py-1.5
@@ -171,15 +176,15 @@ const Formulaire = () => {
        ease-in-out
        m-0
        focus:text-black focus:bg-gray-50 focus:border-gray-600 focus:shadow-none focus:outline-none"
-							id="exampleInput8"
-							placeholder="Email"
-							onChange={(e) => setEmail(e.target.value)}
-						/>
-					</div>
+								id="exampleInput8"
+								placeholder={t("form.email")}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
+						</div>
 
-					<div className="form-group mb-6">
-						<textarea
-							className="
+						<div className="form-group mb-6">
+							<textarea
+								className="
        form-control
        block
        w-full
@@ -196,17 +201,17 @@ const Formulaire = () => {
        m-0
        focus:text-black focus:bg-gray-50 focus:border-gray-600 focus:shadow-none focus:outline-none
      "
-							id="exampleFormControlTextarea13"
-							rows="3"
-							placeholder="Votre message..."
-							onChange={(e) => setMessage(e.target.value)}
-						></textarea>
-					</div>
+								id="exampleFormControlTextarea13"
+								rows="3"
+								placeholder={t("form.message")}
+								onChange={(e) => setMessage(e.target.value)}
+							></textarea>
+						</div>
 
-					<button
-						id="submit-btn1"
-						type="submit"
-						className="
+						<button
+							id="submit-btn1"
+							type="submit"
+							className="
      w-full
      px-6
      py-4
@@ -225,25 +230,26 @@ const Formulaire = () => {
      transition
      duration-150
      ease-in-out btn-form"
-					>
-						Envoyer
-					</button>
-					<div className="hidden" id="loader">
-						<div className="mx-auto flex justify-center">
-							<ThreeDots
-								id="loaderId"
-								height="80"
-								width="80"
-								radius="9"
-								color="#ff7f00"
-								ariaLabel="three-dots-loading"
-								wrapperStyle={{}}
-								wrapperClassName=""
-								visible={true}
-							/>
+						>
+							{t("form.envoyer")}
+						</button>
+						<div className="hidden" id="loader">
+							<div className="mx-auto flex justify-center">
+								<ThreeDots
+									id="loaderId"
+									height="80"
+									width="80"
+									radius="9"
+									color="#ff7f00"
+									ariaLabel="three-dots-loading"
+									wrapperStyle={{}}
+									wrapperClassName=""
+									visible={true}
+								/>
+							</div>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 	)

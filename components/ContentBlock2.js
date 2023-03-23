@@ -4,27 +4,24 @@ import Image from "next/image"
 import icon1 from "../public/icones/pin.png"
 import icon2 from "../public/icones/phone.png"
 import logo from "../public/logo.png"
+import { useTranslation } from "next-i18next"
 
 const ContentBlock2 = () => {
+	const { t } = useTranslation("home")
 	return (
 		<section className="gradiant">
 			<div className=" flex flex-col container lg:flex-row ">
 				<div className="  py-10 lg:pr-20 bg-white  lg:w-[50%]  ">
 					<div className="md:pr-28">
 						<h2 className="font-OpenSans font-black text-xl uppercase title title--orangeSmall">
-							Réservez votre séjour et profitez d’une expérience inoubliable !
+							{t("home.blockContent1.titre")}
 						</h2>
 					</div>
 					<p className="text-md leading-6  md:text-justify mt-7 xl:leading-8 xl:text-lg">
-						Contactez-nous dès maintenant pour réserver votre séjour au sein de
-						notre pourvoirie 4 saisons, ou pour toutes demandes d’informations
-						concernant l’emplacement, la disponibilité, les équipements sur
-						place, les tarifs ou toutes autres questions. Il nous fera plaisir
-						de vous apporter des réponses claires et précises sur ce que vous
-						trouverez sur place.
+						{t("home.blockContent1.content")}
 						<br />
 						<br />
-						Au plaisir de vous accueillir au Domaine Aventurier
+						{t("home.blockContent1.content2")}
 					</p>
 				</div>
 				<div className=" py-10 bg-[#79cf00] relative px-5 lg:w-[50%] 2xl:pl-16 2xl:pr-20 ">
@@ -54,7 +51,7 @@ const ContentBlock2 = () => {
 								<span className="mt-1 block">
 									514-518-2643
 									<span className="text-sm md:ml-1 block md:inline-block">
-										(Cellulaire : Appel / SMS)
+										{t("home.contact.content")}
 									</span>
 								</span>
 							</p>

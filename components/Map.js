@@ -1,6 +1,7 @@
 import React from "react"
-
+import { useTranslation } from "next-i18next"
 const Map = () => {
+	const { t } = useTranslation("home")
 	return (
 		<section>
 			<div className="w-full">
@@ -20,21 +21,18 @@ const Map = () => {
 					<div className="lg:absolute flex justify-end  flex-col  pb-0 bg-white lg:pb-10 lg:ml-[69%]  lg:h-[500px] xl:pr-8">
 						<div className="">
 							<h2 className="font-OpenSans font-black text-lg uppercase title">
-								Directions :
+								{t("home.directions.titre")}
 							</h2>
 						</div>
 						<p className="text-sm leading-5  md:text-justify mt-3 xl:leading-6 xl:text-md">
-							<span className="font-bold">De Montréal:</span> Autoroute 15 Nord
-							– sortie 35, autoroute 50 Ouest – sortie 174, route 309 Nord
-							jusqu’au village de Notre-Dame-du-Laus, prendre le pont à gauche
-							(réservoir Poisson Blanc), au bout du pont tourner à droite sur le
-							chemin du Poisson Blanc jusqu’au Domaine Aventurier. (2km) <br />
+							<span className="font-bold">{t("home.directions.content")} </span>
+							{t("home.directions.content2")}
 							<br />
-							<span className="font-bold">D’Ottawa:</span> Autoroute 50 Est,
-							route 309 Nord jusqu’au village de Notre-Dame-du-Laus, prendre le
-							pont à gauche (réservoir Poisson Blanc), au bout du pont tourner à
-							droite sur le chemin du Poisson Blanc jusqu’au Domaine Aventurier.
-							(2km)
+							<br />
+							<span className="font-bold">
+								{t("home.directions.content3")}{" "}
+							</span>
+							{t("home.directions.content4")}
 						</p>
 					</div>
 				</div>

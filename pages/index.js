@@ -20,7 +20,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 export async function getStaticProps({ locale }) {
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ["common", "nav"])),
+			...(await serverSideTranslations(locale, ["home", "nav"])),
 			// Will be passed to the page component as props
 		},
 	}
@@ -28,7 +28,7 @@ export async function getStaticProps({ locale }) {
 //// rajout de ce bloc sur toute les pages
 
 export default function Home() {
-	const { t } = useTranslation("common")
+	const { t } = useTranslation("home")
 
 	const [scroll, setScroll] = useState(false)
 	useEffect(() => {
@@ -39,22 +39,16 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>
-					Domaine Aventurier - Pourvoirie chasse et pêche dans les Hautes
-					Laurentides
-				</title>
-				<meta
-					name="description"
-					content="Pourvoirie chasse et pêche dans les Hautes Laurentides"
-				/>
+				<title>{t("home.titre")}</title>
+				<meta name="description" content={t("home.sousTitre")} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<NavBar scroll={scroll} />
 			<main>
-				<p className="text-[#ffffff] absolute z-[1000]">
-					{/* {t("homepage.title")} */}
-				</p>
+				{/* <p className="text-[#ffffff] absolute z-[1000]">
+					{t("homepage.title")}
+				</p> */}
 				<RightBar />
 				<Intro />
 				<Galery />

@@ -24,144 +24,151 @@ import ImgRightTarifWhite from "@/components/ImgRightTarifWhite"
 import TarifForfait2 from "@/components/TarifForfait2"
 import { useEffect, useState } from "react"
 
-const textCerf = (
-	<p className="mt-2 text-md leading-6">
-		<span className="font-bold uppercase">
-			Forfait 3 nuitées + 4 jours de chasse
-		</span>
-		<span className="font-bold text-[#ff7f00] block ">550$ +tx / Personne</span>
-		<br />
-		Hébergement inclus
-	</p>
-)
-const textDindon = (
-	<p className="mt-2 text-md leading-6">
-		<span className="font-bold uppercase">
-			Forfait 3 nuitées, 2 matinées + guide
-		</span>
-		<span className="font-bold text-[#ff7f00] block ">
-			900.00$ +tx / Personne
-		</span>
-		Personne additionnelle 450$ +tx
-		<br /> <br />
-		Leurres, tente
-		<br />
-	</p>
-)
-const textSauvagine = (
-	<p className="mt-2 text-md leading-6">
-		<span className="font-bold uppercase">
-			Forfait 2 nuitées + 2 matinées avec guide
-		</span>
-		<span className="font-bold text-[#ff7f00] block ">
-			600.00$ +tx / Personne
-		</span>
-		Personne additionnelle 300$ +tx
-		<br /> <br />
-		Leurres, tente
-		<br />
-	</p>
-)
-const textOurs = (
-	<p className="mt-2 text-md leading-6">
-		<span className="font-bold uppercase">
-			Forfait 3 nuitées + 2 jours de chasse
-		</span>
-		<span className="font-bold text-[#ff7f00] block ">
-			750.00$ +tx / Personne
-		</span>
-		Personne additionnelle 500$ +tx
-		<br /> <br />
-		Sites appâtés, cache, tente
-		<br />
-	</p>
-)
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useTranslation } from "next-i18next"
 
-const textPeche = (
-	<p className="mt-2 text-md leading-6">
-		<span className="font-bold uppercase">
-			Forfait 2 nuitées + 3 jours de pêche
-		</span>
-		<span className="font-bold text-[#ff7f00] block">
-			550.00$ +tx / Personne
-		</span>
-		<br />
-		<span className="font-bold uppercase">Forfait 1 semaine</span>
-		<span className="font-bold text-[#ff7f00] block">
-			1100.00$ +tx / Personne
-		</span>
-		<br />
-		Hébergement inclus + Embarcation
-	</p>
-)
-
-const textQuad = (
-	<p className="mt-2 text-md leading-6">
-		<span className="font-bold uppercase">
-			Forfait 2 nuitées + 3 jours de quad
-		</span>
-		<span className="font-bold text-[#ff7f00] block">
-			550.00$ +tx / Personne
-		</span>
-		<br />
-		<span className="font-bold uppercase">Forfait 1 semaine</span>
-		<span className="font-bold text-[#ff7f00] block">1100$ +tx / Personne</span>
-		<br />
-		Inclus la literie et repas pré-cuisinés
-	</p>
-)
-
-const textForfaitVagabond = (
-	<p className="mt-2 text-md leading-6">
-		Comprend: Hébergement 1 nuit, literie, service de repas pré-cuisinés à la
-		carte.
-		<br />
-		<span className="font-bold text-[#ff7f00] ">
-			100$ +tx / Personne / Nuit - Semaine seulement
-		</span>
-	</p>
-)
-
-const textForfaitDebarcadaire = (
-	<p className="mt-2 text-md leading-6">
-		Comprend: Hébergement (2 nuits), 1 nuit à votre arrivée et 1 nuit à votre
-		départ, literie, stationnement pour remorque, service de repas pré-cuisinés
-		à la carte.
-		<br />
-		<span className="font-bold text-[#ff7f00] ">
-			En semaine = 120$ +tx / Personne / Nuit
-			<br />
-			Week-end = 160$ +tx / Personne / Nuit
-		</span>
-	</p>
-)
-
-const textForfaitTouriste = (
-	<p className="mt-2 text-md leading-6">
-		Comprend: Hébergement minimum 3 nuits, literie, service de repas
-		pré-cuisinés à la carte.
-		<br />
-		<span className="font-bold text-[#ff7f00] ">
-			En semaine = 110$ +tx / Personne / Nuit
-			<br />
-			Week-end = 150$ +tx / Personne / Nuit
-		</span>
-	</p>
-)
-
-const textForfaitAventurier = (
-	<p className="mt-2 text-md leading-6">
-		Comprend: Hébergement 3 nuits, 2 jours de pêche blanche tout équipé, repas
-		pré-cuisinés à la carte.
-		<br />
-		<span className="font-bold text-[#ff7f00] ">
-			En semaine = 275$ +tx / Personne / Nuit <br />
-			Week-end = 300$ +tx / Personne / Nuit
-		</span>
-	</p>
-)
+export async function getStaticProps({ locale }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ["tarifs", "nav"])),
+			// Will be passed to the page component as props
+		},
+	}
+}
 
 const tarifs = () => {
+	const { t } = useTranslation("tarifs")
+	//////////////////////////////////////
+	//////////////////////////////////////
+	const textCerf = (
+		<p className="mt-2 text-md leading-6">
+			<span className="font-bold uppercase">{t("tarifs.cerf.content")}</span>
+			<span className="font-bold text-[#ff7f00] block ">
+				{t("tarifs.cerf.content2")}
+			</span>
+			<br />
+			{t("tarifs.cerf.content3")}
+		</p>
+	)
+	const textDindon = (
+		<p className="mt-2 text-md leading-6">
+			<span className="font-bold uppercase">{t("tarifs.dindon.content")}</span>
+			<span className="font-bold text-[#ff7f00] block ">
+				{t("tarifs.dindon.content2")}
+			</span>
+			{t("tarifs.dindon.content3")}
+			<br /> <br />
+			{t("tarifs.dindon.content4")}
+			<br />
+		</p>
+	)
+	const textSauvagine = (
+		<p className="mt-2 text-md leading-6">
+			<span className="font-bold uppercase">
+				{t("tarifs.sauvagine.content")}
+			</span>
+			<span className="font-bold text-[#ff7f00] block ">
+				{t("tarifs.sauvagine.content2")}
+			</span>
+			{t("tarifs.sauvagine.content3")}
+			<br /> <br />
+			{t("tarifs.sauvagine.content4")}
+			<br />
+		</p>
+	)
+	const textOurs = (
+		<p className="mt-2 text-md leading-6">
+			<span className="font-bold uppercase">{t("tarifs.ours.content")}</span>
+			<span className="font-bold text-[#ff7f00] block ">
+				{t("tarifs.ours.content2")}
+			</span>
+			{t("tarifs.ours.content3")}
+			<br /> <br />
+			{t("tarifs.ours.content4")}
+			<br />
+		</p>
+	)
+
+	const textPeche = (
+		<p className="mt-2 text-md leading-6">
+			<span className="font-bold uppercase">{t("tarifs.peche.content")}</span>
+			<span className="font-bold text-[#ff7f00] block">
+				{t("tarifs.peche.content2")}
+			</span>
+			<br />
+			<span className="font-bold uppercase">{t("tarifs.peche.content3")}</span>
+			<span className="font-bold text-[#ff7f00] block">
+				{t("tarifs.peche.content4")}
+			</span>
+			<br />
+			{t("tarifs.peche.content5")}
+		</p>
+	)
+
+	const textQuad = (
+		<p className="mt-2 text-md leading-6">
+			<span className="font-bold uppercase">{t("tarifs.quad.content")}</span>
+			<span className="font-bold text-[#ff7f00] block">
+				{t("tarifs.quad.content2")}
+			</span>
+			<br />
+			<span className="font-bold uppercase">{t("tarifs.quad.content3")}</span>
+			<span className="font-bold text-[#ff7f00] block">
+				{t("tarifs.quad.content4")}
+			</span>
+			<br />
+			{t("tarifs.quad.content5")}
+		</p>
+	)
+
+	const textForfaitVagabond = (
+		<p className="mt-2 text-md leading-6">
+			{t("tarifs.vagabond.content")}
+			<br />
+			<span className="font-bold text-[#ff7f00] ">
+				{t("tarifs.vagabond.content2")}
+			</span>
+		</p>
+	)
+
+	const textForfaitDebarcadaire = (
+		<p className="mt-2 text-md leading-6">
+			{t("tarifs.debarcadere.content")}
+			<br />
+			<span className="font-bold text-[#ff7f00] ">
+				{t("tarifs.debarcadere.content2")}
+				<br />
+				{t("tarifs.debarcadere.content3")}
+			</span>
+		</p>
+	)
+
+	const textForfaitTouriste = (
+		<p className="mt-2 text-md leading-6">
+			{t("tarifs.touriste.content")}
+			<br />
+			<span className="font-bold text-[#ff7f00] ">
+				{t("tarifs.touriste.content2")}
+				<br />
+				{t("tarifs.touriste.content3")}
+			</span>
+		</p>
+	)
+
+	const textForfaitAventurier = (
+		<p className="mt-2 text-md leading-6">
+			{t("tarifs.aventurier.content")}
+			<br />
+			<span className="font-bold text-[#ff7f00] ">
+				{t("tarifs.aventurier.content2")}
+				<br />
+				{t("tarifs.aventurier.content3")}
+			</span>
+		</p>
+	)
+	//////////////////////////////////////
+	//////////////////////////////////////
+
 	const [scroll, setScroll] = useState(false)
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
@@ -171,8 +178,8 @@ const tarifs = () => {
 	return (
 		<div>
 			<Head>
-				<title>Domaine Aventurier - Tarifs</title>
-				<meta name="description" content="Domaine Aventurier - Tarifs" />
+				<title>{t("tarifs.titre")}</title>
+				<meta name="description" content={t("tarifs.titre")} />
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<NavBar scroll={scroll} />
@@ -181,7 +188,7 @@ const tarifs = () => {
 					<div className="h-96 relative">
 						<div className="container z-10">
 							<h1 className=" font-OpenSans absolute bottom-10 text-white font-black text-4xl uppercase title title--orangeBig">
-								Nos Tarifs
+								{t("tarifs.titre2")}
 							</h1>
 						</div>
 
@@ -194,7 +201,7 @@ const tarifs = () => {
 				</section>
 
 				<section className="font-bold text-2xl container text-center py-10">
-					<h2 className="text-[#79cf00]">Forfaits chasse 2023-2024</h2>
+					<h2 className="text-[#79cf00]">{t("tarifs.forfaitChasse.titre")}</h2>
 				</section>
 
 				<section id="dindon">
@@ -202,7 +209,7 @@ const tarifs = () => {
 						icon={iconDinde}
 						introPageImg={tarifDindonImg}
 						text={textDindon}
-						titre={"Dindon Sauvage"}
+						titre={t("tarifs.dindon.titre")}
 					/>
 				</section>
 				<section id="chevreuil">
@@ -210,7 +217,7 @@ const tarifs = () => {
 						icon={iconChevreuil}
 						introPageImg={tarifChevreuilImg}
 						text={textCerf}
-						titre={"CERF DE VIRGINIE (chevreuil)"}
+						titre={t("tarifs.cerf.titre")}
 					/>
 				</section>
 				<section id="sauvagine">
@@ -218,7 +225,7 @@ const tarifs = () => {
 						icon={iconSauvagine}
 						introPageImg={tarifSauvagineImg}
 						text={textSauvagine}
-						titre={"Forfait Sauvagine"}
+						titre={t("tarifs.sauvagine.titre")}
 					/>
 				</section>
 
@@ -227,51 +234,51 @@ const tarifs = () => {
 						icon={iconOurs}
 						introPageImg={tarifOursImg}
 						text={textOurs}
-						titre={"Forfait Ours"}
+						titre={t("tarifs.ours.titre")}
 					/>
 				</section>
 
 				<section className="font-bold text-2xl container text-center py-10">
-					<h2 className="text-[#79cf00]">Forfaits pêche 2023-2024</h2>
+					<h2 className="text-[#79cf00]">{t("tarifs.forfaitPeche.titre")}</h2>
 				</section>
 				<section id="peche">
 					<ImgRightTarif
 						icon={iconPeche}
 						introPageImg={tarifPecheImg}
 						text={textPeche}
-						titre={"Forfait Pêche"}
+						titre={t("tarifs.peche.titre")}
 					/>
 				</section>
 
 				<section className="font-bold text-2xl container text-center py-10">
-					<h2 className="text-[#79cf00]">Forfaits Quad-Motoneige 2023-2024</h2>
+					<h2 className="text-[#79cf00]">{t("tarifs.forfaitQuad.titre")}</h2>
 				</section>
 				<section id="motoneige">
 					<ImgRightTarif
 						icon={iconQuad}
 						introPageImg={tarifQuadImg}
 						text={textQuad}
-						titre={"Quad-Motoneige"}
+						titre={t("tarifs.quad.titre")}
 					/>
 				</section>
 
 				<section className="container my-10">
 					<div className="flex flex-row justify-between items-center flex-wrap gap-10">
 						<TarifForfait2
-							titre={"forfait Vagabond :"}
+							titre={t("tarifs.vagabond.titre")}
 							texte={textForfaitVagabond}
 						/>
 						<TarifForfait2
-							titre={"Forfait débarcadère pour 2 personnes :"}
+							titre={t("tarifs.debarcadere.titre")}
 							texte={textForfaitDebarcadaire}
 						/>
 
 						<TarifForfait2
-							titre={"Forfait touriste :"}
+							titre={t("tarifs.touriste.titre")}
 							texte={textForfaitTouriste}
 						/>
 						<TarifForfait2
-							titre={"Forfait Aventurier pour 2 personnes :"}
+							titre={t("tarifs.aventurier.titre")}
 							texte={textForfaitAventurier}
 						/>
 					</div>
@@ -290,8 +297,11 @@ const tarifs = () => {
 									></Image>
 								</div>
 								<h2 className="font-bold text-xl ml-5 uppercase ">
-									Chalets
-									<span className="text-sm"> (Minimum 2 nuits)</span>
+									{t("tarifs.chalet.titre")}
+									<span className="text-sm">
+										{" "}
+										{t("tarifs.chalet.sousTitre")}
+									</span>
 								</h2>
 							</div>
 						</div>
@@ -299,32 +309,31 @@ const tarifs = () => {
 							<table className="border-collapse border border-slate-400 w-full text-left ">
 								<thead className=" bg-slate-100 text-xs md:text-sm uppercase">
 									<tr>
-										<th className="border border-slate-300 p-2">Chalet</th>
 										<th className="border border-slate-300 p-2">
-											Nombre de chambres
+											{t("tarifs.chalet.titre")}
 										</th>
-										<th className="border border-slate-300 p-2">Personnes</th>
-										<th className="border border-slate-300 p-2">Par Jour</th>
-										<th className="border border-slate-300 p-2">Par Semaine</th>
+										<th className="border border-slate-300 p-2">
+											{t("tarifs.chalet.content")}
+										</th>
+										<th className="border border-slate-300 p-2">
+											{" "}
+											{t("tarifs.chalet.content2")}
+										</th>
+										<th className="border border-slate-300 p-2">
+											{" "}
+											{t("tarifs.chalet.content3")}
+										</th>
+										<th className="border border-slate-300 p-2">
+											{" "}
+											{t("tarifs.chalet.content4")}
+										</th>
 									</tr>
 								</thead>
 								<tbody className="text-xs md:text-sm">
 									<tr>
-										<td className="border border-slate-300 p-2">Chalet #1</td>
-										<td className="border border-slate-300 p-2">2</td>
-										<td className="border border-slate-300 p-2">2-4</td>
-										<td className="border border-slate-300 p-2">170$</td>
-										<td className="border border-slate-300 p-2">900$</td>
-									</tr>
-									<tr>
-										<td className="border border-slate-300 p-2">Chalet #2</td>
-										<td className="border border-slate-300 p-2">3</td>
-										<td className="border border-slate-300 p-2">5-6</td>
-										<td className="border border-slate-300 p-2">190$</td>
-										<td className="border border-slate-300 p-2">1100$</td>
-									</tr>
-									<tr>
-										<td className="border border-slate-300 p-2">Chalet #3</td>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #1
+										</td>
 										<td className="border border-slate-300 p-2">2</td>
 										<td className="border border-slate-300 p-2">2-4</td>
 										<td className="border border-slate-300 p-2">170$</td>
@@ -332,7 +341,26 @@ const tarifs = () => {
 									</tr>
 									<tr>
 										<td className="border border-slate-300 p-2">
-											Chalet #4 <span> (non disponible / bureau)</span>
+											{t("tarifs.chalet.titre2")} #2
+										</td>
+										<td className="border border-slate-300 p-2">3</td>
+										<td className="border border-slate-300 p-2">5-6</td>
+										<td className="border border-slate-300 p-2">190$</td>
+										<td className="border border-slate-300 p-2">1100$</td>
+									</tr>
+									<tr>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #3
+										</td>
+										<td className="border border-slate-300 p-2">2</td>
+										<td className="border border-slate-300 p-2">2-4</td>
+										<td className="border border-slate-300 p-2">170$</td>
+										<td className="border border-slate-300 p-2">900$</td>
+									</tr>
+									<tr>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #4{" "}
+											<span> {t("tarifs.chalet.content6")}</span>
 										</td>
 										<td className="border border-slate-300 p-2">1</td>
 										<td className="border border-slate-300 p-2">1-2</td>
@@ -340,35 +368,45 @@ const tarifs = () => {
 										<td className="border border-slate-300 p-2">1000$</td>
 									</tr>
 									<tr>
-										<td className="border border-slate-300 p-2">Chalet #5</td>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #5
+										</td>
 										<td className="border border-slate-300 p-2">3</td>
 										<td className="border border-slate-300 p-2">5-8</td>
 										<td className="border border-slate-300 p-2">190$</td>
 										<td className="border border-slate-300 p-2">1100$</td>
 									</tr>
 									<tr>
-										<td className="border border-slate-300 p-2">Chalet #6</td>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #6
+										</td>
 										<td className="border border-slate-300 p-2">1</td>
 										<td className="border border-slate-300 p-2">2-6</td>
 										<td className="border border-slate-300 p-2">160$</td>
 										<td className="border border-slate-300 p-2">1100$</td>
 									</tr>
 									<tr>
-										<td className="border border-slate-300 p-2">Chalet #7</td>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #7
+										</td>
 										<td className="border border-slate-300 p-2">2</td>
 										<td className="border border-slate-300 p-2">2-8</td>
 										<td className="border border-slate-300 p-2">170$</td>
 										<td className="border border-slate-300 p-2">900$</td>
 									</tr>
 									<tr>
-										<td className="border border-slate-300 p-2">Chalet #8</td>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #8
+										</td>
 										<td className="border border-slate-300 p-2">2</td>
 										<td className="border border-slate-300 p-2">2-6</td>
 										<td className="border border-slate-300 p-2">170$</td>
 										<td className="border border-slate-300 p-2">900$</td>
 									</tr>
 									<tr>
-										<td className="border border-slate-300 p-2">Chalet #9</td>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.chalet.titre2")} #9
+										</td>
 										<td className="border border-slate-300 p-2">2</td>
 										<td className="border border-slate-300 p-2">2-6</td>
 										<td className="border border-slate-300 p-2">170$</td>
@@ -377,7 +415,7 @@ const tarifs = () => {
 								</tbody>
 							</table>
 							<span className="text-sm mt-2 block">
-								LES ANIMAUX DE COMPAGNIES NE SONT PAS ACCEPTÉS SUR LE SITE.
+								{t("tarifs.chalet.content5")}
 							</span>
 						</div>
 					</section>
@@ -392,7 +430,10 @@ const tarifs = () => {
 										className="w-[45px] mb-2 md:mb-0  lg:w-[35px]"
 									></Image>
 								</div>
-								<h2 className="font-bold text-xl ml-5 uppercase ">Camping</h2>
+								<h2 className="font-bold text-xl ml-5 uppercase ">
+									{" "}
+									{t("tarifs.camping.titre")}
+								</h2>
 							</div>
 						</div>
 						<div className="overflow-scroll md:overflow-auto">
@@ -400,18 +441,29 @@ const tarifs = () => {
 								<thead className=" bg-slate-100 text-xs md:text-sm uppercase">
 									<tr>
 										<th className="border border-slate-300 p-2"></th>
-										<th className="border border-slate-300 p-2">Par jour</th>
-										<th className="border border-slate-300 p-2">Par semaine</th>
-										<th className="border border-slate-300 p-2">Mois</th>
 										<th className="border border-slate-300 p-2">
-											Saison
-											<span className="text-xs ml-2">(15 Mai au 15 Oct)</span>
+											{t("tarifs.camping.content4")}
+										</th>
+										<th className="border border-slate-300 p-2">
+											{t("tarifs.camping.content5")}
+										</th>
+										<th className="border border-slate-300 p-2">
+											{t("tarifs.camping.content6")}
+										</th>
+										<th className="border border-slate-300 p-2">
+											{t("tarifs.camping.content7")}
+											<span className="text-xs ml-2">
+												{" "}
+												{t("tarifs.camping.content8")}
+											</span>
 										</th>
 									</tr>
 								</thead>
 								<tbody className="text-xs md:text-sm">
 									<tr>
-										<td className="border border-slate-300 p-2">TENTE</td>
+										<td className="border border-slate-300 p-2">
+											{t("tarifs.camping.content")}
+										</td>
 										<td className="border border-slate-300 p-2">40$</td>
 										<td className="border border-slate-300 p-2">200$</td>
 										<td className="border border-slate-300 p-2">600$</td>
@@ -419,7 +471,7 @@ const tarifs = () => {
 									</tr>
 									<tr>
 										<td className="border border-slate-300 p-2">
-											TENTE-ROULOTTE
+											{t("tarifs.camping.content2")}
 										</td>
 										<td className="border border-slate-300 p-2">60$</td>
 										<td className="border border-slate-300 p-2">360$</td>
@@ -427,7 +479,10 @@ const tarifs = () => {
 										<td className="border border-slate-300 p-2">2200$</td>
 									</tr>
 									<tr>
-										<td className="border border-slate-300 p-2">ROULOTTE</td>
+										<td className="border border-slate-300 p-2">
+											{" "}
+											{t("tarifs.camping.content3")}
+										</td>
 										<td className="border border-slate-300 p-2">60$</td>
 										<td className="border border-slate-300 p-2">360$</td>
 										<td className="border border-slate-300 p-2">1080$</td>

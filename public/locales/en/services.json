@@ -1,0 +1,35 @@
+{
+	"services": {
+		"titre": "Our services",
+		"peche": {
+			"titre": "Fishing",
+			"content": "Located on a magnificent land bordering the Lièvre River, the Sables Reservoir, as well as the immense Poisson Blanc Reservoir, 29 km long and scattered with 148 islands, our haven of peace is also surrounded by 250 lakes.",
+			"content2": "Fishing is abundant and varied (walleye, pike, lake trout, bass, landlocked salmon, yellow perch, etc.)."
+		},
+		"chasse": {
+			"titre": "Hunting",
+			"content": "The heavy density of white-tailed deer in Zone 10 West is a great benefit to hunters.",
+			"content2": "They will be able to benefit from an exclusive and non-exclusive territory (Crown Lands) near our services.",
+			"content3": "Whether it is for bows, rifle, black powder or crossbow hunting, we can provide you with a stand and baiting services.",
+			"content4": "Contact us for terms and conditions."
+		},
+		"chalet": {
+			"titre": "Cabins",
+			"content": "Our rustic cottage will seduce you with their superb view on the Lièvre River and their low prices. They are all furnished and dishes are provided.",
+			"content2": "You have to bring:",
+			"content3": "- Bedding",
+			"content4": "- Bath towels"
+		},
+		"camping": {
+			"titre": "Camping & Caravanning",
+			"sousTitre": "(Seasonal and Daily)",
+			"content": "Take advantage of our site with mature trees, to offer you the tranquility and the joys of the outdoors.",
+			"content2": "The majority of our land includes water, electricity and sewer. We also have on our site a sanitary block with showers, toilets (paper not included) and laundry room."
+		},
+		"quad": {
+			"titre": "ATV",
+			"content": "ATV adventurers will enjoy 200 km of 4-season trails that are remarkably well maintained by the municipality's local club, member of the Fédération Québécoise des Clubs Quads.",
+			"content2": "Come and take in the breathtaking views from the top of Devil's Mountain as well as the many mountain and lake panoramas. Don't miss the wonderful colours that the fall season brings."
+		}
+	}
+}
