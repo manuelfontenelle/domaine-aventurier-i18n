@@ -112,3 +112,10 @@ nav {
 		}
 	}
 }
+
+.btn-form {
+	&.disabled-btn {
+		cursor: wait;
+		opacity: 0.5;
+	}
+}
