@@ -1,0 +1,114 @@
+@import "mixins";
+
+$primary-color: #ff7f00;
+$secondary-color: #79cf00;
+$third-color: #141414;
+
+// h2 {
+// 	color: $primary-color;
+// 	@include lg {
+// 		color: $secondary-color;
+// 	}
+// }
+
+// .image {
+// 	height: 100% !important;
+// }
+nav {
+	.active {
+		color: $primary-color;
+	}
+}
+
+.borderBottomCustom {
+	position: relative;
+	padding: 15px 0px;
+	// display: block;
+	&:hover {
+		// opacity: 1;
+		&:before {
+			width: 97%;
+		}
+	}
+	&:before {
+		transition: 600ms;
+		height: 2px;
+		content: "";
+		position: absolute;
+		background-color: $primary-color;
+		width: 0%;
+		bottom: 10px;
+	}
+
+	.active & {
+		&:before {
+			width: 100%;
+		}
+	}
+}
+.title {
+	display: inline-block;
+	position: relative;
+	&:before {
+		height: 4px;
+		content: "";
+		position: absolute;
+		width: 65%;
+		bottom: -7px;
+	}
+	&--orange {
+		&:before {
+			background-color: $primary-color;
+		}
+	}
+	&--orangeBig {
+		&:before {
+			background-color: $primary-color;
+			height: 8px;
+			bottom: -15px;
+		}
+	}
+	&--orangeSmall {
+		&:before {
+			width: 15%;
+			background-color: $primary-color;
+		}
+	}
+	&--green {
+		&:before {
+			background-color: $secondary-color;
+		}
+	}
+}
+
+.gradiant {
+	@media only screen and (min-width: 1024px) {
+		background: linear-gradient(90deg, white 50%, #79cf00 50%);
+	}
+}
+
+#background-video {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.barreOblique {
+	& a:first-child {
+		padding-right: 15px;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "|";
+			padding-left: 4px;
+			color: white;
+			top: 0;
+		}
+	}
+}
