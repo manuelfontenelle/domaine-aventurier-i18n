@@ -74,6 +74,14 @@ const NavBar = ({ scroll }) => {
 							</li>
 						</Link>
 						<Link
+							href="/chalets"
+							className={currentRoute === "/chalets" ? "active" : "nonActive"}
+						>
+							<li className="ml-10 text-sm uppercase borderBottomCustom">
+								{t("nav.chalets")}
+							</li>
+						</Link>
+						<Link
 							href="/contact"
 							className={currentRoute === "/contact" ? "active" : "nonActive"}
 						>
@@ -162,16 +170,19 @@ const NavBar = ({ scroll }) => {
 					<div className="py-4  flex-col font-OpenSans ">
 						<ul className="uppercase font-bold">
 							<Link href="/">
-								<li className="py-4 text-md">Accueil</li>
+								<li className="py-4 text-md">{t("nav.accueil")}</li>
 							</Link>
 							<Link href="/services">
-								<li className="py-4 text-md">Services</li>
+								<li className="py-4 text-md">{t("nav.services")}</li>
 							</Link>
 							<Link href="/tarifs">
-								<li className="py-4 text-md">Tarifs</li>
+								<li className="py-4 text-md">{t("nav.tarifs")}</li>
+							</Link>
+							<Link href="/tarifs">
+								<li className="py-4 text-md">{t("nav.chalets")}</li>
 							</Link>
 							<Link href="/contact">
-								<li className="py-4 text-md">Contact</li>
+								<li className="py-4 text-md">{t("nav.contact")}</li>
 							</Link>
 							<a
 								target="_blank"
