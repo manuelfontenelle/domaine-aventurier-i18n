@@ -37,6 +37,7 @@ const contact = () => {
 		<div>
 			<Head>
 				<title>Domaine Aventurier - Contact</title>
+				<meta name="robots" content="noindex,nofollow" />
 				<meta name="description" content="Domaine Aventurier - Contact" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>

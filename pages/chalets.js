@@ -138,6 +138,7 @@ const chalets = () => {
 		<div>
 			<Head>
 				<title>{t("chalets.titre")}</title>
+				<meta name="robots" content="noindex,nofollow" />
 				<meta name="description" content="Domaine Aventurier - Chalets" />
 				<link rel="icon" href="/favicon.png" />
 				<meta property="og:title" content={t("chalets.sousTitre")} />
