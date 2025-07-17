@@ -179,7 +179,7 @@ const tarifs = () => {
 		<div>
 			<Head>
 				<title>{t("tarifs.titre")}</title>
-				<meta name="robots" content="noindex,nofollow" />
+				<meta name="robots" content="noindex" />
 				<meta name="description" content={t("tarifs.titre")} />
 				<link rel="icon" href="/favicon.png" />
 			</Head>

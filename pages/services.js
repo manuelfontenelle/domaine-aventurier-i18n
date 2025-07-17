@@ -100,7 +100,7 @@ const services = () => {
 		<div>
 			<Head>
 				<title>Domaine Aventurier - Services</title>
-				<meta name="robots" content="noindex,nofollow" />
+				<meta name="robots" content="noindex" />
 				<meta name="description" content="Domaine Aventurier - Services" />
 				<link rel="icon" href="/favicon.png" />
 			</Head>
