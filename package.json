@@ -8,6 +8,9 @@
 		"start": "next start",
 		"lint": "next lint"
 	},
+	"engines": {
+		"node": "22.x"
+	},
 	"dependencies": {
 		"@netlify/plugin-nextjs": "^4.30.0",
 		"@next/font": "13.1.6",
